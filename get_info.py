@@ -26,5 +26,5 @@ def get_info(url):
 
     # print(", ".join(authors))
 
-    txt = f"{author_join} releasd {title} {url}"
+    txt = f"{author_join} released {title} {url}"
     return txt

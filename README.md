@@ -21,3 +21,4 @@ There are several features being considered for the future. Among them are:
 - [ ] Slower paced tweeting of old projects
 - [ ] Tweet when something changes Metal level
 - [ ] Registry of authors and twitter handles to tweet @ them if available
+- [ ] Add gameline and edition information to tweets

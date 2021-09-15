@@ -1,5 +1,8 @@
 # STVaultBot
 
+![](https://www.code-inspector.com/project/28682/score/svg)
+![](https://www.code-inspector.com/project/28682/status/svg)
+
 The purpose of STVaultBot is to scrape the www.storytellersvault.com page, find what new titles have been posted, and tweet them.
 
 # Status

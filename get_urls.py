@@ -18,4 +18,8 @@ def get_new_item_urls():
     with open('tmp.json', 'r') as filename:
         most_recent = json.load(filename)['most_recent']
     new_items = urls[:urls.index(most_recent)]
-    return new_items
+    newest = new_items[0]
+    newest = {"most_recent": newest}
+    with open('tmp.json', 'w') as filename:
+        json.dump(newest, filename)
+    return new_items[::-1]

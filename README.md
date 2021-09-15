@@ -10,9 +10,9 @@ The purpose of STVaultBot is to scrape the www.storytellersvault.com page, find 
 STVaultBot's functionality divides into:
 
 - [x] Get new urls since last check
-  - [ ] Update stored most_recent_url
-- [ ] Extract book information from new urls
-- [ ] Create and send tweet
+  - [x] Update stored most_recent_url
+- [x] Extract book information from new urls
+- [x] Create and send tweet
 
 # Future Features?
 

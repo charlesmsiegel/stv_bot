@@ -4,6 +4,5 @@ from send_tweet import send_tweet
 
 new_urls = get_new_item_urls()
 for url in new_urls:
-    print(url)
-    image, text = get_info(url)
-    send_tweet(image, text)
+    text = get_info(url)
+    send_tweet(text)

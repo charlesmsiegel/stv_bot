@@ -2,7 +2,7 @@ import json
 import tweepy
 
 
-def send_tweet(text, image=None):
+def send_tweet(text):
     with open("API_KEYS.json", 'r') as filename:
         auths = json.load(filename)
 
@@ -10,7 +10,4 @@ def send_tweet(text, image=None):
     auth.set_access_token(auths['access_token'], auths['access_token_secret'])
 
     api = tweepy.API(auth)
-    if image is not None:
-        api.update_status(text, media_ids=[image])
-    else:
-        api.update_status(text)
+    api.update_status(text)

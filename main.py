@@ -1,8 +1,16 @@
-from get_urls import get_new_item_urls
-from get_info import get_info
-from send_tweet import send_tweet
+import json
+import stv_bot
 
-new_urls = get_new_item_urls()
-for url in new_urls:
-    text = get_info(url)
-    send_tweet(text)
+current_ids = stv_bot.obs_scraping.get_recent_releases()[::-1]
+with open('data.json', 'r') as f:
+    tmp_dict = json.load(f)
+
+if len(current_ids) > 0:
+    tmp_dict['most_recent'] = current_ids[-1]
+
+with open('data.json', 'w') as f:
+    json.dump(tmp_dict, f, indent=4)
+
+for identifier in current_ids:
+    text = stv_bot.obs_scraping.get_product(identifier)
+    stv_bot.social_media.send_tweet(text)

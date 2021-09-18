@@ -3,7 +3,7 @@ import tweepy
 
 
 def send_tweet(text):
-    with open("API_KEYS.json", 'r') as filename:
+    with open("data.json", 'r') as filename:
         auths = json.load(filename)
 
     auth = tweepy.OAuthHandler(auths['API_KEY'], auths['API_SECRET_KEY'])

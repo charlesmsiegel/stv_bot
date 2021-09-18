@@ -15,7 +15,8 @@ def get_product(product_id):
     price = float(product['attributes']['price'])
     authors = ", ".join(authors)
 
+    url = "https://www.storytellersvault.com/product/" + product_id + "/"
+
     if authors == "":
-        return f"{title} has been released at ${price:.02f}! https://www.storytellersvault.com/product/{product_id}/"
-    else:
-        return f"{authors} have released {title} at ${price:.02f}! https://www.storytellersvault.com/product/{product_id}/"
+        return f"{title} has been released at ${price:.02f}! {url}"
+    return f"{authors} have released {title} at ${price:.02f}! {url}"

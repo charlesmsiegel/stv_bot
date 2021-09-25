@@ -12,6 +12,10 @@ def get_product(product_id):
 
     title = product['attributes']['description']['name']
     authors = product['attributes']['authors']
+    if len(authors) == 1:
+        verb = "has"
+    else:
+        verb = "have"
     price = float(product['attributes']['price'])
     authors = ", ".join(authors)
 
@@ -19,4 +23,4 @@ def get_product(product_id):
 
     if authors == "":
         return f"{title} has been released at ${price:.02f}! {url}"
-    return f"{authors} have released {title} at ${price:.02f}! {url}"
+    return f"{authors} {verb} released {title} at ${price:.02f}! {url}"
